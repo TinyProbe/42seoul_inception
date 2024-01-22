@@ -27,7 +27,7 @@ RUN apt-get update \
   && \
     mv wp-cli.phar /usr/local/bin/wp \
   && \
-    mkdir /run/php \
+    mkdir -p /run/php \
   && \
     chmod +x /usr/local/bin/create_wordpress.sh
 

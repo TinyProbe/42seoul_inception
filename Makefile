@@ -13,13 +13,14 @@
 all: up
 
 up:
-	@docker compose -f ./scrs/docker-compose.yml up -d --build
+	@mkdir -p ~/data/{mysql,wordpress}
+	docker-compose -f./srcs/docker-compose.yml up -d --build
 
 down:
-	@docker compose -f ./scrs/docker-compose.yml down
+	docker-compose -f./srcs/docker-compose.yml down
 
 clean:
-	@docker stop $$(docker ps -qa); \
+	docker stop $$(docker ps -qa); \
 	docker rm $$(docker ps -qa); \
 	docker rmi -f $$(docker images -qa); \
 	docker volume rm $$(docker volume ls -q); \

@@ -21,8 +21,8 @@ RUN apt-get update \
     mkdir /etc/nginx/ssl \
   && \
     openssl req -newkey rsa:4096 -x509 -sha256 -nodes -days 365 \
-        -out /etc/nginx/ssl/vbachele.crt \
-        -keyout /etc/nginx/ssl/vbachele.key \
+        -out /etc/nginx/ssl/tkong.crt \
+        -keyout /etc/nginx/ssl/tkong.key \
         -subj "/C=KR/ST=Seoul/L=Seoul/O=42Seoul/OU=tkong/CN=tkong/"
 
 COPY ./conf/nginx.conf /etc/nginx/conf.d

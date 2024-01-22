@@ -39,9 +39,7 @@ services:
     container_name: wordpress
     depends_on:
       - mariadb
-    build:
-      context: ./requirements/wordpress
-      dockerfile: Dockerfile
+    build: ./requirements/wordpress
     volumes:
       - wordpress_data:/var/www/html
     networks:
