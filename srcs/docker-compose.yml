@@ -1,61 +1,53 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    docker-compose.yml                                 :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/04 16:31:08 by tkong             #+#    #+#              #
-#    Updated: 2023/08/04 16:31:10 by tkong            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 version: '3'
 
 services:
   nginx:
+    image: nginx:inception
     container_name: nginx
     build: ./requirements/nginx
+    restart: always
+    volumes:
+      - vol_wordpress:/var/www/html
+    networks:
+      - net_inception
     ports:
       - 443:443
-    volumes:
-      - wordpress_data:/var/www/html
-    networks:
-      - network
-    restart: always
 
   mariadb:
+    image: mariadb:inception
     container_name: mariadb
     build: ./requirements/mariadb
+    restart: always
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - vol_mariadb:/var/lib/mysql
     networks:
-      - network
+      - net_inception
     env_file:
       - .env
-    restart: always
 
   wordpress:
+    image: wordpress:inception
     container_name: wordpress
+    build: ./requirements/wordpress
+    restart: always
     depends_on:
       - mariadb
-    build: ./requirements/wordpress
     volumes:
-      - wordpress_data:/var/www/html
+      - vol_wordpress:/var/www/html
     networks:
-      - network
+      - net_inception
     env_file:
       - .env
-    restart: always
 
 volumes:
-  mariadb_data:
+  vol_mariadb:
     driver: local
     driver_opts:
       type: none
-      device: /home/tkong/data/mysql
+      device: /home/tkong/data/mariadb
       o: bind
-  wordpress_data:
+
+  vol_wordpress:
     driver: local
     driver_opts:
       type: none
@@ -63,5 +55,5 @@ volumes:
       o: bind
 
 networks:
-  network:
+  net_inception:
     driver: bridge

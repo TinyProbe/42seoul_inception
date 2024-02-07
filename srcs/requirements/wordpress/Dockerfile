@@ -1,43 +1,18 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Dockerfile                                         :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/04 16:33:00 by tkong             #+#    #+#              #
-#    Updated: 2023/08/04 16:33:09 by tkong            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 FROM debian:bullseye
-
-RUN apt-get update \
-  && \
-    apt-get install -y \
-        wget curl bash php php-cgi php-mysql \
-        php-fpm php-pdo php-gd php-cli \
-        php-mbstring php-redis redis \
-  && \
-    rm -rf /var/lib/apt/lists/* \
-  && \
-    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
-  && \
-    chmod +x wp-cli.phar \
-  && \
-    mv wp-cli.phar /usr/local/bin/wp \
-  && \
-    mkdir -p /run/php \
-  && \
-    chmod +x /usr/local/bin/create_wordpress.sh
-
-COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d/
-COPY ./tools/create_wordpress.sh /usr/local/bin/
-
-ENTRYPOINT ["/usr/local/bin/create_wordpress.sh"]
-
-WORKDIR /var/www/html/
-
+RUN apt update -y && \
+    apt upgrade -y && \
+    apt install -y wget curl bash php7.4 php7.4-fpm php7.4-mysql \
+        php7.4-cli php7.4-common php7.4-opcache php7.4-readline \
+        php7.4-mbstring php7.4-xml php7.4-gd php7.4-curl && \
+    rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /run/php && \
+    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cl\
+i.phar && \
+    chmod +x wp-cli.phar && \
+    mv wp-cli.phar /usr/local/bin/wp
+COPY ./part/www.conf /etc/php/7.4/fpm/pool.d/
+COPY ./part/wordpress.sh /usr/local/bin/
 EXPOSE 9000
-
-CMD ["/usr/sbin/php-fpm7.3", "-F"]
+WORKDIR /var/www/html/
+ENTRYPOINT ["/usr/local/bin/wordpress.sh"]
+CMD ["/usr/sbin/php-fpm7.4", "-F"]
