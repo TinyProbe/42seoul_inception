@@ -7,7 +7,6 @@ RUN apt update -y && \
     chown -R mysql:mysql /run/mysqld && \
     chmod 777 /run/mysqld
 COPY ./part/mariadb.sh /usr/local/bin/
-COPY ./part/wordpress.sql /usr/local/bin/
 COPY ./part/mysqld.conf /etc/mysql/my.cnf
 EXPOSE 3306
 ENTRYPOINT ["/usr/local/bin/mariadb.sh"]

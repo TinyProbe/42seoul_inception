@@ -10,10 +10,10 @@ up:
 	chmod +x __add_domain.sh
 	./__add_domain.sh
 	sudo rm __add_domain.sh
-	docker-compose -f ./srcs/docker-compose.yaml up -d --build
+	docker-compose -f ./srcs/docker-compose.yml up -d --build
 
 down:
-	docker-compose -f ./srcs/docker-compose.yaml down
+	docker-compose -f ./srcs/docker-compose.yml down
 
 clean:
 	echo "#!/bin/sh" > __clean.sh

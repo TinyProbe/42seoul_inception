@@ -21,7 +21,6 @@ Y
   echo "create database if not exists $MARIADB_DB; grant all on \
       $MARIADB_DB.* to '$MARIADB_USER'@'%' identified by '$MARIADB_PW'; \
       flush privileges;" | mariadb -u root
-  mariadb -u root $MARIADB_DB < /usr/local/bin/wordpress.sql
 fi
 /etc/init.d/mariadb stop
 exec "$@"
