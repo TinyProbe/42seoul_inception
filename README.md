@@ -1,6 +1,6 @@
 in terminal, virtual host machine:<br>
 su -<br>
-echo "$USER ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/sudoers<br>
+echo "[ID] ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/sudoers<br>
 exit<br>
 sudo apt update -y && sudo apt upgrade -y<br>
 sudo apt install -y git make docker-compose<br>
