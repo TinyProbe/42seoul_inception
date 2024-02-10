@@ -16,7 +16,7 @@ check all source files.<br>
 after modify:<br>
 sudo make [up|down|clean]<br>
 <br>
-in web browzer:<br>
+in web browser:<br>
 https://[ID].42.[kr|fr]<br>
 <br>
 whatever you choose type exactly.<br>
