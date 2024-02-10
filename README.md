@@ -16,7 +16,7 @@ check all source files.<br>
 after modify:<br>
 sudo make [up|down|clean]<br>
 <br>
-in web browser:<br>
+in web browser(do after 30s from docker-compose up):<br>
 https://[ID].42.[kr|fr]<br>
 <br>
 whatever you choose type exactly.<br>
