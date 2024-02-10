@@ -1,22 +1,22 @@
-in terminal, virtual host machine:
+in terminal, virtual host machine:<br>
 su -<br>
-echo "$USER ALL=(ALL:ALL) ALL" >> /etc/sudoers.tmp
-exit
-sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y git make docker-compose
-cd Documents
-git clone https://github.com/TinyProbe/42seoul_inception inception
-cd inception
-
-# you must have to do modify each sources for you.
-# tkong.42.kr -> <ID>.42.[kr|fr]
-# tkong -> <ID>
-# check all source files.
-
-after modify:
-sudo make [up|down|clean]
-
-in web browzer:
-https://<ID>.42.[kr|fr]
-
-# whatever you choose type exactly.
+echo "$USER ALL=(ALL:ALL) ALL" >> /etc/sudoers.tmp<br>
+exit<br>
+sudo apt update -y && sudo apt upgrade -y<br>
+sudo apt install -y git make docker-compose<br>
+cd Documents<br>
+git clone https://github.com/TinyProbe/42seoul_inception inception<br>
+cd inception<br>
+<br>
+you must have to do modify each sources for you.<br>
+tkong.42.kr -> <ID>.42.[kr|fr]<br>
+tkong -> <ID><br>
+check all source files.<br>
+<br>
+after modify:<br>
+sudo make [up|down|clean]<br>
+<br>
+in web browzer:<br>
+https://<ID>.42.[kr|fr]<br>
+<br>
+whatever you choose type exactly.<br>
