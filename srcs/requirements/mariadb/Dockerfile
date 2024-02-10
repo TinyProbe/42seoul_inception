@@ -1,8 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Dockerfile                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/02/10 10:39:59 by tkong             #+#    #+#              #
+#    Updated: 2024/02/10 10:39:59 by tkong            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 FROM debian:bullseye
 RUN apt update -y && \
     apt upgrade -y && \
     apt install -y mariadb-server mariadb-client && \
-    rm -rf /var/lib/apt/lists/* && \
     mkdir -p /run/mysqld && \
     chown -R mysql:mysql /run/mysqld && \
     chmod 777 /run/mysqld

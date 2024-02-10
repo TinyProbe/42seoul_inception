@@ -1,10 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Dockerfile                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/02/10 10:40:39 by tkong             #+#    #+#              #
+#    Updated: 2024/02/10 10:40:39 by tkong            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 FROM debian:bullseye
 RUN apt update -y && \
     apt upgrade -y && \
     apt install -y wget curl bash php7.4 php7.4-fpm php7.4-mysql \
         php7.4-cli php7.4-common php7.4-opcache php7.4-readline \
         php7.4-mbstring php7.4-xml php7.4-gd php7.4-curl && \
-    rm -rf /var/lib/apt/lists/* && \
     mkdir -p /run/php && \
     curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cl\
 i.phar && \
