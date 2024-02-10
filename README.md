@@ -11,7 +11,7 @@ cd inception<br>
 you must have to do modify each sources for you.<br>
 tkong.42.kr -> [ID].42.[kr|fr]<br>
 tkong -> [ID]<br>
-42seoul -> [ur org]
+42seoul -> [ur org]<br>
 check all source files.<br>
 <br>
 after modify:<br>
