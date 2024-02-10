@@ -1,5 +1,5 @@
 in terminal, virtual host machine:
-su -
+su -<br>
 echo "$USER ALL=(ALL:ALL) ALL" >> /etc/sudoers.tmp
 exit
 sudo apt update -y && sudo apt upgrade -y
