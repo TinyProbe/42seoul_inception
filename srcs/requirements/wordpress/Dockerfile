@@ -25,5 +25,5 @@ COPY ./part/www.conf /etc/php/7.4/fpm/pool.d/
 COPY ./part/wordpress.sh /usr/local/bin/
 EXPOSE 9000
 WORKDIR /var/www/html/
-ENTRYPOINT ["/usr/local/bin/wordpress.sh"]
-CMD ["/usr/sbin/php-fpm7.4", "-F"]
+ENTRYPOINT ["wordpress.sh"]
+CMD ["php-fpm7.4", "-F"]

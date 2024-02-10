@@ -20,5 +20,5 @@ RUN apt update -y && \
 COPY ./part/mariadb.sh /usr/local/bin/
 COPY ./part/mysqld.conf /etc/mysql/my.cnf
 EXPOSE 3306
-ENTRYPOINT ["/usr/local/bin/mariadb.sh"]
+ENTRYPOINT ["mariadb.sh"]
 CMD ["mariadbd", "--bind-address=0.0.0.0"]
