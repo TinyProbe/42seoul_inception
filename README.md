@@ -1,10 +1,10 @@
-[ur ID]: intra ID(strictly ur hostname).<br>
+[ur ID]: intra ID(strictly ur hostname&login user).<br>
 [ur country ID]: kr, fr, en, etc... .<br>
 [ur org]: 42seoul, 42vienna, 42sao paulo, etc... .<br>
 <br>
 in terminal, virtual host machine:<br>
 su -<br>
-echo "[ur ID] ALL=(ALL:ALL) ALL" > /etc/sudoers.d/sudoers<br>
+echo "[ur ID] ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/sudoers<br>
 exit<br>
 sudo apt update -y && sudo apt upgrade -y<br>
 sudo apt install -y git make docker-compose<br>
