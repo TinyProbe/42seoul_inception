@@ -1,3 +1,5 @@
+made in from debian VM.<br>
+<br>
 # Var
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
 [ur country ID]: kr, fr, en, etc... .<br>
