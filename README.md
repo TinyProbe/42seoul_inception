@@ -1,4 +1,4 @@
-[ur ID]: intra ID(strictly ur hostname&login user).<br>
+[ur ID]: intra ID(strictly ur hostname & login user).<br>
 [ur country ID]: kr, fr, en, etc... .<br>
 [ur org]: 42seoul, 42vienna, 42sao paulo, etc... .<br>
 <br>
