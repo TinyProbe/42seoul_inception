@@ -1,4 +1,4 @@
-made in from debian VM.<br>
+made in from debian Bookworm VM.<br>
 <br>
 # Var
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
