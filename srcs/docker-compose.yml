@@ -10,6 +10,10 @@ services:
       - vol_wordpress:/var/www/html
     networks:
       - net_inception
+    env_file:
+      - .env
+    depends_on:
+      - wordpress
     ports:
       - 443:443
 
