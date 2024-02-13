@@ -43,5 +43,5 @@ WP_USER_PW=123123
 sudo make [up|down|clean]
 ```
 
-# On web browser(do after 15sec from docker-compose up finished):<br>
+# On web browser(do after 30sec from docker-compose up finished):<br>
 https://[ur ID].42.fr<br>
