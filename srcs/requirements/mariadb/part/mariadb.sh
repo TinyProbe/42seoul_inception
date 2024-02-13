@@ -8,17 +8,17 @@ else
   echo "
 Y
 Y
-123123
-123123
+$MARIADB_ROOT_PW
+$MARIADB_ROOT_PW
 Y
 n
 Y
 Y
 " | mysql_secure_installation
-  echo "grant all on *.* to 'root'@'%' identified by '$MARIADB_ROOTPW'; \
+  echo "grant all on *.* to 'root'@'%' identified by '$MARIADB_ROOT_PW'; \
       flush privileges;" | mariadb -u root
   echo "create database if not exists $MARIADB_DB; grant all on \
-      $MARIADB_DB.* to '$MARIADB_USER'@'%' identified by '$MARIADB_USERPW'; \
+      $MARIADB_DB.* to '$MARIADB_USER_ID'@'%' identified by '$MARIADB_USER_PW';\
       flush privileges;" | mariadb -u root
 fi
 /etc/init.d/mariadb stop

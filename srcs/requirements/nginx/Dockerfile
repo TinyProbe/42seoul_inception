@@ -2,11 +2,8 @@ FROM debian:bullseye
 RUN apt update -y && \
     apt upgrade -y && \
     apt install -y nginx openssl && \
-    mkdir -p /etc/nginx/ssl /run/nginx && \
-    openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes \
-        -out /etc/nginx/ssl/tkong.crt \
-        -keyout /etc/nginx/ssl/tkong.key \
-        -subj "/C=KR/ST=./L=Seoul/O=42Seoul/OU=tkong/CN=tkong/"
-COPY ./part/nginx.conf /etc/nginx/conf.d
+    mkdir -p /etc/nginx/ssl /run/nginx
+COPY ./part/nginx.sh /usr/local/bin/
 EXPOSE 443
+ENTRYPOINT ["nginx.sh"]
 CMD ["nginx", "-g", "daemon off;"]
