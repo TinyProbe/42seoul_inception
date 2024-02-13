@@ -1,6 +1,6 @@
-made in from debian 12.5.0 VM.<br><br>
+Made in from debian 12.5.0 VM.<br><br>
 
-notification:<br>
+Notifications:<br>
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
 
 # In terminal, virtual host machine:<br>
@@ -37,7 +37,7 @@ WP_ADMIN_PW=123123
 WP_USER_ID=tkong
 WP_USER_PW=123123
 ```
-change value for you.<br>
+Change the value to what works for you.<br>
 
 # In terminal, after add .env:<br>
 ```shell
