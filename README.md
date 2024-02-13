@@ -1,6 +1,6 @@
 made in from debian 12.5.0 VM.<br><br>
 
-# Var
+notification:
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
 
 # In terminal, virtual host machine:<br>
@@ -16,6 +16,7 @@ cd inception
 ```
 
 # You have to add .env file in ./srcs/.<br>
+example:
 ```
 DOMAIN=tkong.42.fr
 
@@ -37,11 +38,10 @@ WP_USER_ID=tkong
 WP_USER_PW=123123
 ```
 
-# In terminal, after modify:<br>
+# In terminal, after add .env:<br>
 ```shell
 sudo make [up|down|clean]
 ```
 
 # On web browser(do after 30sec from docker-compose up finished):<br>
-https://[ur ID].42.fr<br><br>
-whatever you choose type exactly.<br>
+https://[ur ID].42.fr<br>
