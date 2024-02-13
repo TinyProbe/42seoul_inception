@@ -2,8 +2,6 @@ made in from debian 12.5.0 VM.<br><br>
 
 # Var
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
-[ur country ID]: kr, fr, en, etc... .<br>
-[ur org]: 42seoul, 42vienna, 42sao paulo, etc... .<br><br>
 
 # In terminal, virtual host machine:<br>
 ```shell
@@ -17,12 +15,27 @@ git clone https://github.com/TinyProbe/42seoul_inception inception
 cd inception
 ```
 
-# You have to modify each sources for you.<br>
-tkong.42.kr -> [ur ID].42.[ur country ID]<br>
-tkong -> [ur ID]<br>
-42seoul -> [ur org]<br>
-<br>
-check all source files.<br><br>
+# You have to add .env file in ./srcs/.<br>
+```
+DOMAIN=tkong.42.fr
+
+CNTRY=KR
+STATE=.
+CITY=Seoul
+ORG='42 Seoul'
+USER=tkong
+
+MARIADB_HOST=mariadb
+MARIADB_DB=wp
+MARIADB_ROOT_PW=123123
+MARIADB_USER_ID=wp_user1
+MARIADB_USER_PW=123123
+
+WP_ADMIN_ID=manager
+WP_ADMIN_PW=123123
+WP_USER_ID=tkong
+WP_USER_PW=123123
+```
 
 # In terminal, after modify:<br>
 ```shell
@@ -30,5 +43,5 @@ sudo make [up|down|clean]
 ```
 
 # On web browser(do after 30sec from docker-compose up finished):<br>
-https://[ur ID].42.[ur country ID]<br><br>
+https://[ur ID].42.fr<br><br>
 whatever you choose type exactly.<br>
