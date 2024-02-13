@@ -23,8 +23,8 @@ DOMAIN=[ur ID].42.fr
 CNTRY=kr
 STATE=.
 CITY=Seoul
-ORG='42seoul' # tkong@student.$ORG.$CNTRY
-USER=[ur ID]
+ORG=42seoul
+USER=[ur ID] # $USER@student.$ORG.$CNTRY
 
 MARIADB_HOST=mariadb
 MARIADB_DB=wp
