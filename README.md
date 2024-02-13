@@ -37,6 +37,7 @@ WP_ADMIN_PW=123123
 WP_USER_ID=tkong
 WP_USER_PW=123123
 ```
+change value for you.<br>
 
 # In terminal, after add .env:<br>
 ```shell
