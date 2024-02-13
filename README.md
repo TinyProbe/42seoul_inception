@@ -1,6 +1,6 @@
 made in from debian 12.5.0 VM.<br><br>
 
-notification:
+notification:<br>
 [ur ID]: intra ID(strictly ur hostname & login user).<br>
 
 # In terminal, virtual host machine:<br>
