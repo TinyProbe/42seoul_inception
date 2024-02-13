@@ -1,7 +1,7 @@
 Made in from debian 12.5.0 VM.<br><br>
 
 Notifications:<br>
-[ur ID]: intra ID(strictly ur hostname & login user).<br>
+[ur ID]: intra ID(strictly ur VM's hostname & login user).<br>
 
 # In terminal, virtual host machine:<br>
 ```shell
