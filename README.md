@@ -34,7 +34,7 @@ MARIADB_USER_PW=123123
 
 WP_ADMIN_ID=manager
 WP_ADMIN_PW=123123
-WP_USER_ID=tkong
+WP_USER_ID=user1
 WP_USER_PW=123123
 ```
 Change the value to what works for you.<br>
