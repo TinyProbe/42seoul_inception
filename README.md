@@ -17,13 +17,13 @@ cd inception
 
 # You have to add .env file in ./srcs/.<br>
 example:
-```
+```shell
 DOMAIN=[ur ID].42.fr
 
-CNTRY=KR
+CNTRY=kr
 STATE=.
 CITY=Seoul
-ORG='42 Seoul'
+ORG='42seoul'
 USER=[ur ID]
 
 MARIADB_HOST=mariadb
