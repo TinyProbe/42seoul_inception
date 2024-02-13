@@ -18,13 +18,13 @@ cd inception
 # You have to add .env file in ./srcs/.<br>
 example:
 ```
-DOMAIN=tkong.42.fr
+DOMAIN=[ur ID].42.fr
 
 CNTRY=KR
 STATE=.
 CITY=Seoul
 ORG='42 Seoul'
-USER=tkong
+USER=[ur ID]
 
 MARIADB_HOST=mariadb
 MARIADB_DB=wp
@@ -43,5 +43,5 @@ WP_USER_PW=123123
 sudo make [up|down|clean]
 ```
 
-# On web browser(do after 30sec from docker-compose up finished):<br>
+# On web browser(do after 15sec from docker-compose up finished):<br>
 https://[ur ID].42.fr<br>
