@@ -48,14 +48,14 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/tkong/data/mariadb
+      device: /home/INTRA_ID/data/mariadb
       o: bind
 
   vol_wordpress:
     driver: local
     driver_opts:
       type: none
-      device: /home/tkong/data/wordpress
+      device: /home/INTRA_ID/data/wordpress
       o: bind
 
 networks:
