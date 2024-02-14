@@ -26,7 +26,7 @@ CITY=Seoul
 ORG=42seoul
 USER=[ur ID] # $USER@student.$ORG.$CNTRY
 
-MARIADB_HOST=mariadb
+MARIADB_HOST=mariadb # static
 MARIADB_DB=wp
 MARIADB_ROOT_PW=123123
 MARIADB_USER_ID=wp_user1
