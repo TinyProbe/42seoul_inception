@@ -1,7 +1,7 @@
 Made in from debian 12.5.0 VM.<br><br>
 
 Notifications:<br>
-[ur ID]: intra ID(strictly ur hostname & login user).<br>
+[ur ID]: intra ID(strictly ur VM's hostname & login user).<br>
 
 # In terminal, virtual host machine:<br>
 ```shell
@@ -26,7 +26,7 @@ CITY=Seoul
 ORG=42seoul
 USER=[ur ID] # $USER@student.$ORG.$CNTRY
 
-MARIADB_HOST=mariadb
+MARIADB_HOST=mariadb # do not change.
 MARIADB_DB=wp
 MARIADB_ROOT_PW=123123
 MARIADB_USER_ID=wp_user1
