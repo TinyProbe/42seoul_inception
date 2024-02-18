@@ -20,7 +20,7 @@ else
       --title="Hello Inception!" \
       --admin_user="$WP_ADMIN_ID" \
       --admin_password="$WP_ADMIN_PW" \
-      --admin_email="$USER@student.42seoul.kr"
+      --admin_email="$USER@student.$ORG.$CNTRY"
   wp user create --allow-root \
       "$WP_USER_ID" \
       "hello@example.com" \
