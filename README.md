@@ -1,9 +1,9 @@
-Made in from debian 12.5.0 VM.<br><br>
+Made in from debian 12.5.0 VM.    
 
-Notifications:<br>
-[ur ID]: intra ID(strictly ur VM's hostname & login user).<br>
+Notifications:  
+[ur ID]: intra ID(strictly ur VM's hostname & login user).  
 
-# In terminal, virtual host machine:<br>
+# In terminal, virtual host machine:  
 ```shell
 su -
 echo "[ur ID] ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/sudoers
@@ -15,7 +15,7 @@ git clone https://github.com/TinyProbe/42seoul_inception inception
 cd inception
 ```
 
-# You have to add .env file in ./srcs/.<br>
+# You have to add .env file in ./srcs/.  
 example:
 ```shell
 DOMAIN=[ur ID].42.fr
@@ -37,12 +37,12 @@ WP_ADMIN_PW=123123
 WP_USER_ID=user1
 WP_USER_PW=123123
 ```
-Change the value to what works for you.<br>
+Change the value to what works for you.  
 
-# In terminal, after add .env:<br>
+# In terminal, after add .env:  
 ```shell
 sudo make [up|down|clean]
 ```
 
-# On web browser(do after 30sec from docker-compose up finished):<br>
-https://[ur ID].42.fr<br>
+# On web browser(do after 30sec from docker-compose up finished):  
+https://[ur ID].42.fr  
