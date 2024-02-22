@@ -1,10 +1,11 @@
 #!/bin/sh
 
-openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes \
-    -out /etc/nginx/ssl/$USER.crt \
-    -keyout /etc/nginx/ssl/$USER.key \
-    -subj "/C=$CNTRY/ST=$STATE/L=$CITY/O=$ORG/OU=$USER/CN=$USER/"
-echo "\
+if [[ ! -f /etc/nginx/ssl/$USER.crt ]]; then
+  openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes \
+      -out /etc/nginx/ssl/$USER.crt \
+      -keyout /etc/nginx/ssl/$USER.key \
+      -subj "/C=$CNTRY/ST=$STATE/L=$CITY/O=$ORG/OU=$USER/CN=$USER/"
+  echo "\
 server {
   listen 443 ssl;
   listen [::]:443 ssl;
@@ -30,4 +31,5 @@ server {
   }
 }
 " > /etc/nginx/conf.d/nginx.conf
+fi
 exec "$@"

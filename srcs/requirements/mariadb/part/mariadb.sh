@@ -1,10 +1,7 @@
 #!/bin/sh
 
 /etc/init.d/mariadb start
-if [ -d "/var/lib/mysql/$MARIADB_DB" ]
-then 
-  echo "-"
-else
+if [[ ! -d "/var/lib/mysql/$MARIADB_DB" ]]; then 
   echo "
 Y
 Y
